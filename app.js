@@ -5,10 +5,10 @@ const countries = require('./countries.json');
  * @returns {Object}
  */
 function getCountryByIso3(isoCode){
-    countries.isoCode = 'iso3'
-}
+    
 
-//probando
+
+    }
 
 /**
  * Get a country translated name given his ISO3 code and tranlated language.
@@ -24,9 +24,9 @@ function getCountryTranslatedName(isoCode, language){
  * @returns {Array}
  */
 function getCountriesBySubregion(subregion){
-    countries.filter(reg => reg.subregion)
-    return subregion;
-
+    const paisSubReg = countries.filter((paisSubReg) => paisSubReg.subregion == subregion
+    )
+  return paisSubReg
 }
 
 function main() {
