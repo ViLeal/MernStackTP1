@@ -23,7 +23,11 @@ function getCountryByIso3(isoCode){
  * @returns {string}
  */
 function getCountryTranslatedName(isoCode, language){
-    
+  const paisTrans = countries.find(
+    (paisTrans) =>
+    paisTrans.iso3 == isoCode || paisTrans.translations === language
+  );
+  return paisTrans;
 }
 /**Get an array of all the countries with the specified subregion
  * @param  {string} subregion
