@@ -6,7 +6,13 @@ const countries = require('./countries.json');
  */
 function getCountryByIso3(isoCode){
     
-
+    let pais = {};
+    for (let i = 0; i < countries.length; i++) {
+      if (isoCode === countries[i].iso3) {
+        pais = countries[i];
+      }
+    }
+    return pais;
 
     }
 
@@ -40,7 +46,7 @@ function main() {
         '\n');
     console.log(
         '///// Ejercicio 3 /////\n',
-        getCountriesBySubregion('South America'),
+       getCountriesBySubregion('South America'),
         '\n');
 
 }
